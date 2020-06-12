@@ -1,4 +1,7 @@
 <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     require __DIR__ .  '/vendor/autoload.php';
 
     MercadoPago\SDK::setAccessToken('APP_USR-843006151276019-121819-96152aa43ff9060702cf329979e6ff68-8714891');
