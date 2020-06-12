@@ -11,8 +11,8 @@ error_reporting(E_ALL);
 
 
     $payer = new MercadoPago\Payer();
-    $payer->name = "Lalo";
-    $payer->surname = "Landa";
+    $payer->first_name = "Lalo";
+    $payer->last_name = "Landa";
     $payer->email = "test_user_63274575@testuser.com";
     $payer->phone = array(
         "area_code" => "11",
@@ -27,8 +27,8 @@ error_reporting(E_ALL);
     $item = new MercadoPago\Item();
     $item->id = "1234";
     $item->title = $_POST['title']; 
-    $item->description = "Dispostivo móvil de Tienda e-commercce"; 
-    $item->img = $_POST['img']; 
+    $item->description = "Dispostivo móvil de Tienda e-commerce"; 
+    $item->picture_url = $_POST['img']; 
     $item->quantity = $_POST['unit'];
     $item->currency_id = "ARS";
     $item->unit_price = $_POST['price'];
