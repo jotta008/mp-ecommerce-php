@@ -11,11 +11,11 @@ error_reporting(E_ALL);
 
 
     $payer = new MercadoPago\Payer();
-    $payer->first_name = "Lalo";
-    $payer->last_name = "Landa";
+    $payer->name = "Lalo";
+    $payer->surname = "Landa";
     $payer->email = "test_user_63274575@testuser.com";
     $payer->phone = array(
-        "area_code" => "11",
+        "area_code" => 11,
         "number" => "22223333"
     );
     $payer->address = array(
@@ -27,7 +27,7 @@ error_reporting(E_ALL);
     $item = new MercadoPago\Item();
     $item->id = "1234";
     $item->title = $_POST['title']; 
-    $item->description = "Dispostivo móvil de Tienda e-commerce"; 
+    $item->description = "Dispositivo móvil de Tienda e-commerce"; 
     $item->picture_url = $_POST['img']; 
     $item->quantity = $_POST['unit'];
     $item->currency_id = "ARS";
