@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>Pago Pendiente de confirmación</h1>
+
+
+    
     
 </body>
 </html>
