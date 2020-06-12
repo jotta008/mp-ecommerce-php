@@ -19,7 +19,7 @@
     "id":<?php echo $data->order->id    ?>,
     "live_mode": true,
     "type":"payment",
-    "user_id": "<?php echo explode('-', $preference_id)[0]   ?>"
+    "user_id": "<?php echo explode('-', $data->preference_id)[0]   ?>"
 
 }
 
