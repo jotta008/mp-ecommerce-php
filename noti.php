@@ -9,7 +9,6 @@
 
     $data = MercadoPago\Payment::find_by_id('7066011131');
 
-    print_r($data->collector_id);
 ?>
 
 <pre>
@@ -28,6 +27,5 @@
 }
 
 </pre>
-<p>Notificación  ver4.0</p>
 
 
