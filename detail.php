@@ -45,7 +45,10 @@
     $preference->items = array($item);
     $preference->payer = $payer;
     $preference->notification_url = "https://jotta008-mp-commerce-php.herokuapp.com/noti.php";
-    $preference->back_urls = ['success' => 'https://jotta008-mp-commerce-php.herokuapp.com/success.php', 'pending' => "https://jotta008-mp-commerce-php.herokuapp.com/pending.php", "failure" => "https://jotta008-mp-commerce-php.herokuapp.com/failure.php"];
+    $preference->back_urls = [
+        'success' => 'https://jotta008-mp-commerce-php.herokuapp.com/success.php', 
+        'pending' => "https://jotta008-mp-commerce-php.herokuapp.com/pending.php", 
+        "failure" => "https://jotta008-mp-commerce-php.herokuapp.com/failure.php"];
     $preference->auto_return = "approved";
     $preference->save();
 ?>
