@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Pago Pendiente de confirmación</h1>
+    <p>comuniquese con el proveedor</p>
 </body>
 </html>
