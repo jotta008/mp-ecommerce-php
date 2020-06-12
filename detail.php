@@ -1,16 +1,16 @@
 <?php
-    require __DIR__ .  '/vendor/autoload.php';
+    require __DIR__ .  './vendor/autoload.php';
 
     MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
     MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
 
-    $preference = new MercadoPago\Preference();
 
 
     $payer = new MercadoPago\Payer();
     $payer->name = "Lalo";
     $payer->surname = "Landa";
     $payer->email = "test_user_63274575@testuser.com";
+    $payer->date_created = new DateTime();
     $payer->phone = array(
         "area_code" => "11",
         "number" => "22223333"
@@ -24,11 +24,13 @@
     $item = new MercadoPago\Item();
     $item->id = "1234";
     $item->title = $_POST['title']; 
-    $item->picture_url = $_POST['img']; 
+    $item->picture_url = 'https://jotta008-mp-commerce-php.herokuapp.com/'.$_POST['img']; 
     $item->description = "Dispositivo móvil de Tienda e-commerce";
     $item->quantity = $_POST['unit'];
     $item->currency_id = "ARS";
     $item->unit_price = $_POST['price'];
+
+    $preference = new MercadoPago\Preference();
 
     $preference->payment_methods = array(
         "excluded_payment_types" => array(
@@ -44,7 +46,7 @@
     $preference->external_reference = "josecirer@gmail.com";
     $preference->auto_return = "approved";
 
-    $preference->items = array($item);
+    $preference->items = [$item];
     $preference->payer = $payer;
     $preference->notification_url = "https://jotta008-mp-commerce-php.herokuapp.com/noti.php";
     $preference->back_urls = [
@@ -187,12 +189,13 @@
                                         </h3>
                                     </div>
                                    
-                                    <form action="/noti.php?id=<?php echo $preference->id?>" method="POST">
+                                    <!-- <form action="/noti.php?id=<?php echo $preference->id?>" method="POST">
                                         <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                                                 data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
-                                    </form>
+                                    </form> -->
+                                    <a href="<?php echo $preference->init_point?>">PAGAR</a>
                                 </div>
                             </div>
                         </div>

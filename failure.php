@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Pago Rechazado</h1>
+    <h1>Pago rechazado</h1>
     
 </body>
 </html>
