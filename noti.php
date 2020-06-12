@@ -8,7 +8,8 @@
     
 
     $data = MercadoPago\Payment::find_by_id('7066011131');
-    var_dump($data);
+
+    print_r($data);
 ?>
 
 <pre>
@@ -27,4 +28,6 @@
 }
 
 </pre>
-<p>Notificación 3</p>
+<p>Notificación  ver4.0</p>
+
+
