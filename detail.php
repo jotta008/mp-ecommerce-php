@@ -27,7 +27,7 @@ error_reporting(E_ALL);
     $item->id = "1234";
     $item->title = $_POST['title']; 
     $item->description = "Dispostivo móvil de Tienda e-commercce"; 
-    $item1->picture_url = $_POST['img']; 
+    $item1->picture_url = 'https://jotta008-mp-commerce-php.herokuapp.com/'.$_POST['img']; 
     $item->quantity = $_POST['unit'];
     $item->currency_id = "ARS";
     $item->unit_price = $_POST['price'];
