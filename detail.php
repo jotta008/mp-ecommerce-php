@@ -44,8 +44,7 @@
 
 
     $preference->external_reference = "josecirer@gmail.com";
-    $preference->auto_return = "approved";
-
+    
     $preference->items = [$item];
     $preference->payer = $payer;
     $preference->notification_url = "https://jotta008-mp-commerce-php.herokuapp.com/noti.php";
@@ -53,6 +52,7 @@
         'success' => 'https://jotta008-mp-commerce-php.herokuapp.com/success.php', 
         'pending' => "https://jotta008-mp-commerce-php.herokuapp.com/pending.php", 
         "failure" => "https://jotta008-mp-commerce-php.herokuapp.com/failure.php"];
+    $preference->auto_return = "approved";
     $preference->save();
 ?>
 
@@ -189,13 +189,13 @@
                                         </h3>
                                     </div>
                                    
-                                    <!-- <form action="/noti.php?id=<?php echo $preference->id?>" method="POST">
+                                    <form action="/noti.php?id=<?php echo $preference->id?>" method="POST">
                                         <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                                                 data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
-                                    </form> -->
-                                    <a href="<?php echo $preference->init_point?>">PAGAR</a>
+                                    </form>
+                                    <!-- <a href="<?php echo $preference->init_point?>">PAGAR</a> -->
                                 </div>
                             </div>
                         </div>
