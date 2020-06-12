@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
     require __DIR__ .  '/vendor/autoload.php';
 
     MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
@@ -15,20 +12,20 @@ error_reporting(E_ALL);
     $payer->surname = "Landa";
     $payer->email = "test_user_63274575@testuser.com";
     $payer->phone = array(
-        "area_code" => 11,
+        "area_code" => "11",
         "number" => "22223333"
     );
     $payer->address = array(
         "street_name" => "False",
-        "street_number" => 123,
+        "street_number" => "123",
         "zip_code" => "1111"
     );
 
     $item = new MercadoPago\Item();
     $item->id = "1234";
     $item->title = $_POST['title']; 
-    $item->description = "Dispositivo móvil de Tienda e-commerce"; 
     $item->picture_url = $_POST['img']; 
+    $item->description = "Dispositivo móvil de Tienda e-commerce";
     $item->quantity = $_POST['unit'];
     $item->currency_id = "ARS";
     $item->unit_price = $_POST['price'];
@@ -190,7 +187,7 @@ error_reporting(E_ALL);
                                         </h3>
                                     </div>
                                    
-                                    <form action="/success.php" method="POST">
+                                    <form action="/noti.php?id=<?php echo $preference->id?>" method="POST">
                                         <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                                                 data-preference-id="<?php echo $preference->id; ?>">
