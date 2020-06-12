@@ -7,7 +7,5 @@
 </head>
 <body>
     <h1>Pago Pendiente de confirmación</h1>
-    <p>prueba de github</p>
-    <p>vamo a ve</p>
 </body>
 </html>
