@@ -9,7 +9,7 @@
 
     $data = MercadoPago\Payment::find_by_id('7066011131');
 
-    print_r($data);
+    print_r($data->collector_id);
 ?>
 
 <pre>
@@ -17,13 +17,13 @@
     "action":"payment.created",
     "api_version":"v1",
     "data":{
-        "id":"<?php echo 'josecirer@gmail.com'?>"
+        "id":"<?php echo $data->id?>"
     },
     "date_created": "<?php echo explode('.', $data->date_created)[0] ?>",
     "id":<?php echo $data->order->id    ?>,
     "live_mode": true,
     "type":"payment",
-    "user_id": "<?php echo explode('-', $preference_id)[0]   ?>"
+    "user_id": "<?php echo explode('-', $data->collector_id)[0]   ?>"
 
 }
 
