@@ -2,13 +2,13 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    require __DIR__ .  '/vendor/autoload.php';
+    require __DIR__ .  'vendor/autoload.php';
 
     MercadoPago\SDK::setAccessToken('APP_USR-843006151276019-121819-96152aa43ff9060702cf329979e6ff68-8714891');
     MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
 
     $data = MercadoPago\Payment::find_by_id('josecirer@gmail.com');
-    print_r($data->preference_id);
+    var_dump($data);
 ?>
 
 <pre>
