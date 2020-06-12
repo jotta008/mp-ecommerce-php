@@ -24,7 +24,7 @@
     $item->id = "1234";
     $item->title = $_POST['title']; 
     $item->description = "Dispostivo móvil de Tienda e-commercce"; 
-    $item1->picture_url = "./assets/samsung-galaxy-s9-xxl.jpg"; 
+    $item1->picture_url = $_POST['img']; 
     $item->quantity = $_POST['unit'];
     $item->currency_id = "ARS";
     $item->unit_price = $_POST['price'];
@@ -41,6 +41,7 @@
 
 
     $preference->external_reference = "josecirer@gmail.com";
+    $preference->auto_return = "approved";
 
     $preference->items = array($item);
     $preference->payer = $payer;
@@ -49,7 +50,6 @@
         'success' => 'https://jotta008-mp-commerce-php.herokuapp.com/success.php', 
         'pending' => "https://jotta008-mp-commerce-php.herokuapp.com/pending.php", 
         "failure" => "https://jotta008-mp-commerce-php.herokuapp.com/failure.php"];
-    $preference->auto_return = "approved";
     $preference->save();
 ?>
 
