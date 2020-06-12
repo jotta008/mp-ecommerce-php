@@ -8,6 +8,7 @@
     
 
     $data = MercadoPago\Payment::find_by_id('7066011131');
+    print_r($data);
 
 ?>
 
